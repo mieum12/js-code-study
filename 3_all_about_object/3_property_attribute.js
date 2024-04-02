@@ -150,14 +150,14 @@ console.log(yuJin2.name) // 안유진
 /**
  * 📍 Configurable test - 프로퍼티 어트리뷰트의 재정의 여부
  */
-// Object.defineProperty(yuJin2,'height',{
-//   configurable: false
-// })
-// console.log(Object.getOwnPropertyDescriptor(yuJin2,'height')) // configurable: false인지 확인
+Object.defineProperty(yuJin2,'height',{
+  configurable: false
+})
+console.log(Object.getOwnPropertyDescriptor(yuJin2,'height')) // configurable: false인지 확인
 // 바꿔보자
-// Object.defineProperty(yuJin2,'height', {
-//   enumerable: false
-// })
+Object.defineProperty(yuJin2,'height', {
+  enumerable: false
+})
 // TypeError: Cannot redefine property: height
 // 이런 에러가 난다 : height라는 프로퍼티를 재정의할 수 없다
 // configurable: false이기 떄문이다 따라서 값을 더이상 변경할 수 없다
