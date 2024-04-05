@@ -1,0 +1,27 @@
+<script>
+  var number1 = 20
+  var number2 = 30
+
+  function multiply(x, y) {
+    var result = x*y;
+    return result
+  }
+  var result1 = multiply(number1, number2)
+  var result2 = multiply(100, 200)
+</script>
+
+<!--
+[Execution Context Stack]
+코드가 실행되기 전에 먼저 creation phase가 실행이 되고,
+호이스팅과 this 맵핑, 글로벌 객체 생성, 아규먼츠 객체 생성하는 것이 전부 execution context를 생성하는 과정 속에서 일어난다
+
+📍 creation phase
+- 글로벌 오브젝트가 생성한다. window 또는 global 객체가 생성되고 함수에서는 argument 객체가 생성됨
+- this를 window 또는 global에 바인딩한다
+- 선언된 모든 변수, 함수들이 이미 메모리 힙에 다 올라가 있다는 것을 알 수 있다 (기본값을 undefined로 저장) = 호이스팅 현상
+- 그 다음 실행이 된다
+
+📍execution phase
+- 코드를 실행한다
+- 필요하다면 execution context를 생성한다
+-->
